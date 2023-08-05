@@ -1,6 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.18 <0.9.0;
 
+/*=============================================================
+ *  This is a quick solution for a challenge to call a
+ * contract's method & get an NFT as a reward
+ *
+ *  >>> IGNORE this file. Instead check Raffle.sol
+ *=============================================================*/
+
 interface ILessonNine {
     function solveChallenge(
         uint256 randomGuess,
