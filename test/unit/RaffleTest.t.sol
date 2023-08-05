@@ -32,19 +32,19 @@ contract RaffleTest is Test {
     uint256 s_deployerKey;
 
     function setUp() external {
-        // DeployRaffle deployer = new DeployRaffle();
-        // (s_raffle, s_helper) = deployer.run();
-        // (
-        //     s_entranceFee,
-        //     s_interval,
-        //     s_vrfCoordinator,
-        //     ,
-        //     s_subscriptionId,
-        //     s_callbackGasLimit,
-        //     s_linkToken,
-        //     s_deployerKey
-        // ) = s_helper.activeNetworkConfig();
-        // vm.deal(s_player, STARTING_USER_BALANCE);
+        DeployRaffle deployer = new DeployRaffle();
+        (s_raffle, s_helper) = deployer.run();
+        (
+            s_entranceFee,
+            s_interval,
+            s_vrfCoordinator,
+            ,
+            s_subscriptionId,
+            s_callbackGasLimit,
+            s_linkToken,
+            s_deployerKey
+        ) = s_helper.activeNetworkConfig();
+        vm.deal(s_player, STARTING_USER_BALANCE);
     }
 
     function testRaffleInitializesInOpenState() public view {
