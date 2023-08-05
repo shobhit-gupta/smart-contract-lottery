@@ -1,0 +1,10 @@
+services:
+  lottery:
+    build: ./
+    stdin_open: true
+    tty: true
+    container_name: lottery-app
+    ports:
+      - "13545:8545"
+    volumes:
+      - ./:/app
